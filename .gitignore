@@ -6,3 +6,5 @@
 /.vs/BlazorTest/v17/DocumentLayout.backup.json
 /.vs/BlazorTest/v17/DocumentLayout.json
 .vs/
+/obj/Debug/net5.0/BlazorTest.AssemblyInfoInputs.cache
+/obj/Debug/net5.0/BlazorTest.AssemblyInfo.cs
