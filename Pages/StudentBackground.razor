@@ -1,8 +1,9 @@
-﻿@page "/Student"
+﻿@page "/StudentBackground"
+@using MudBlazor
 @using BlazorTest
 @inject StudentListViewModel studentListViewModel
 
-<h3>Student List</h3>
+<h3>Student Background</h3>
 
 <table class="table table-bordered">
     <thead>
@@ -12,7 +13,7 @@
             <th>Last Name</th>
             <th>Course</th>
             <th>Year Level</th>
-            <th>Tuition Fee</th> 
+            <th>Background</th> 
         </tr>
     </thead>
     <tbody>
@@ -24,8 +25,12 @@
                 <td>@student.LastName</td>
                 <td>@student.Course</td>
                 <td>@student.YearLevel</td>
-                <td>@student.TuitionFee </td> 
+                <td>@student.Background</td> 
             </tr>
         }
     </tbody>
 </table>
+
+@code {
+
+}

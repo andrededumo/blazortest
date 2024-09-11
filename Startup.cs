@@ -1,4 +1,4 @@
-using BlazorApp.ViewModels;
+using BlazorTest.Pages;
 using BlazorTest.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;

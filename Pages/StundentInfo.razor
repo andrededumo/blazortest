@@ -1,5 +1,7 @@
 ﻿@page "/StudentInfo"
-@using BlazorApp.ViewModels
+@using BlazorTest
+@using MudBlazor
+@using BlazorTest.Data
 @inject StudentListViewModel studentListViewModel
 
 <h3>Student Form</h3>
@@ -35,20 +37,14 @@
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button<MudButton Variant="Variant.Filled" Color="Color.Primary">Submit</MudButton></button>
+
+
 </EditForm>
 
 @if (submitted)
 {
     <h4>Form Submitted Successfully!</h4>
-    <p>Student Info:</p>
-    <ul>
-        <li>ID: @student.Id</li>
-        <li>First Name: @student.FirstName</li>
-        <li>Last Name: @student.LastName</li>
-        <li>Course: @student.Course</li>
-        <li>Year Level: @student.YearLevel</li>
-    </ul>
 }
 
 @code {
@@ -57,7 +53,8 @@
 
     private void HandleValidSubmit()
     {
-        studentListViewModel.AddStudent(student);
+        Student student1 = student;
+        studentListViewModel.Students.Add(student);
         submitted = true;
     }
 
