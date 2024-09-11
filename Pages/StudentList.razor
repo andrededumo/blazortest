@@ -1,0 +1,43 @@
+﻿@page "/Student"
+@using BlazorApp.ViewModels
+@inject StudentListViewModel studentListViewModel
+
+<h3>Student List</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Course</th>
+            <th>Year Level</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in studentListViewModel.Students)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>@student.Course</td>
+                <td>@student.YearLevel</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private Student student = new Student();
+    private bool submitted = false;
+
+    private void HandleValidSubmit()
+    {
+        studentListViewModel.AddStudent(student);
+        submitted = true;
+    }
+
+
+}
+
