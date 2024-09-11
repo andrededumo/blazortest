@@ -5,21 +5,25 @@
 @inject NavigationManager NavigationManager
 
 
-<MudTable Items="@SchoolService.Schools">
-    <HeaderContent>
-        <MudTh>School Name</MudTh>
-        <MudTh>Address</MudTh>
-        <MudTh>School Code</MudTh>
-    </HeaderContent>
-    <RowTemplate>
-        <MudTd DataLabel="School Name">@context.SchoolName</MudTd>
-        <MudTd DataLabel="Address">@context.Address</MudTd>
-        <MudTd DataLabel="School Code">@context.SchoolCode</MudTd>
-    </RowTemplate>
-</MudTable>
+<MudContainer Class="d-flex justify-center" >
+    <MudTable Items="SchoolService.Schools"  Style="width: 70%;">
+        <HeaderContent>
+            <MudTh Typo="Typo.h6">School Name</MudTh>
+            <MudTh Typo="Typo.h6">Address</MudTh>
+            <MudTh Typo="Typo.h6">School Code</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="School Name">@context.SchoolName</MudTd>
+            <MudTd DataLabel="Address">@context.Address</MudTd>
+            <MudTd DataLabel="School Code">@context.SchoolCode</MudTd>
+        </RowTemplate>
+    </MudTable>
 
+</MudContainer>
+<MudContainer Class="d-flex justify-center">
+    <MudButton Class="mt-3" Variant="Variant.Filled" Color="Color.Primary" @onclick="CreateSchool">Add School</MudButton>
+</MudContainer>
 
-<MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="CreateSchool">Add School</MudButton>
 
 
 

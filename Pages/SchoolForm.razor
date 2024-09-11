@@ -4,23 +4,29 @@
 @inject SchoolService SchoolService
 @inject NavigationManager NavigationManager
 
- @* dsdsds *@
-<h3>School Form</h3>
 
 
-<p>School Name:</p>
-<input @bind="newSchoolName"/>
+<MudContainer Class="d-flex justify-center align-center" Style="height: 60vh;">
+	<MudCard Style="width: 30%;">
+		<MudCardContent>
+			<MudText Typo="Typo.h6" Style="padding-bottom: 10px;">School Name</MudText>
+			<MudTextField @bind-Value="newSchoolName" Variant="Variant.Outlined" Style="height: 30px;"></MudTextField>
 
-<p>School Address:</p>
-<input @bind ="newAddress"/>
+			<MudText Typo="Typo.h6" Style="padding-bottom: 10px;">Address</MudText>
+			<MudTextField @bind-Value="newAddress" Variant="Variant.Outlined" Style="height: 30px;"></MudTextField>
 
-<p>School Code:</p>
-<input @bind ="newSchoolCode"/>
+			<MudText Typo="Typo.h6" Style="padding-bottom: 10px;">School Code</MudText>
+			<MudTextField @bind-Value="newSchoolCode" Variant="Variant.Outlined" Style="height: 30px;"></MudTextField>
 
-<br/>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Style="margin-left: 7px;" Variant="Variant.Filled" Color="Color.Primary" @onclick="Save">Add School</MudButton>
+			<MudButton Style="margin-left: 8px;" Variant="Variant.Filled" Color="Color.Primary" @onclick="Cancel">Cancel</MudButton>
+		</MudCardActions>
+	</MudCard>
+</MudContainer>
 
-<button @onclick="Save"> Save</button>
-<button @onclick="Cancel">Cancel </button>
+
 
 @code {
 
