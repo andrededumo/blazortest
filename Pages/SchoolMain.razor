@@ -4,27 +4,26 @@
 @inject SchoolService SchoolService
 @inject NavigationManager NavigationManager
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>School Name</th>
-            <th>Address</th>
-            <th>School Code</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var School in SchoolService.Schools)
-        {
-            <tr>
-                <td>@School.SchoolName</td>
-                <td>@School.Address</td>
-                <td>@School.SchoolCode</td>
-            </tr>
-        }
-    </tbody>
-</table>
 
-<button @onclick="CreateSchool"> Add School</button>
+<MudContainer Class="d-flex justify-center" >
+    <MudTable Items="SchoolService.Schools"  Style="width: 70%;">
+        <HeaderContent>
+            <MudTh Typo="Typo.h6">School Name</MudTh>
+            <MudTh Typo="Typo.h6">Address</MudTh>
+            <MudTh Typo="Typo.h6">School Code</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="School Name">@context.SchoolName</MudTd>
+            <MudTd DataLabel="Address">@context.Address</MudTd>
+            <MudTd DataLabel="School Code">@context.SchoolCode</MudTd>
+        </RowTemplate>
+    </MudTable>
+
+</MudContainer>
+<MudContainer Class="d-flex justify-center">
+    <MudButton Class="mt-3" Variant="Variant.Filled" Color="Color.Primary" @onclick="CreateSchool">Add School</MudButton>
+</MudContainer>
+
 
 
 
