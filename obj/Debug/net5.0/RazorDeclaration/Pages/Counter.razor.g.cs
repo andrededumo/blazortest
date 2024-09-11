@@ -13,67 +13,67 @@ namespace BlazorTest.Pages
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 1 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using System.Net.Http
 
 #nullable disable
     ;
 #nullable restore
-#line 2 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 2 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using Microsoft.AspNetCore.Authorization
 
 #nullable disable
     ;
 #nullable restore
-#line 3 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 3 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization
 
 #nullable disable
     ;
 #nullable restore
-#line 4 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 4 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms
 
 #nullable disable
     ;
 #nullable restore
-#line 5 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 5 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing
 
 #nullable disable
     ;
 #nullable restore
-#line 6 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 6 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web
 
 #nullable disable
     ;
 #nullable restore
-#line 7 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 7 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization
 
 #nullable disable
     ;
 #nullable restore
-#line 8 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 8 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using Microsoft.JSInterop
 
 #nullable disable
     ;
 #nullable restore
-#line 9 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 9 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using BlazorTest
 
 #nullable disable
     ;
 #nullable restore
-#line 10 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 10 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using BlazorTest.Shared
 
 #nullable disable
     ;
 #nullable restore
-#line 11 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\_Imports.razor"
+#line 11 "C:\Users\User\Documents\Kyla\blazortest_kyla\_Imports.razor"
 using MudBlazor
 
 #line default
@@ -83,7 +83,7 @@ using MudBlazor
     [global::Microsoft.AspNetCore.Components.RouteAttribute(
     // language=Route,Component
 #nullable restore
-#line 1 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\Pages\Counter.razor"
+#line 1 "C:\Users\User\Documents\Kyla\blazortest_kyla\Pages\Counter.razor"
       "/counter"
 
 #line default
@@ -100,7 +100,7 @@ using MudBlazor
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\User\Desktop\Repositories\BlazorTest\blazortest\Pages\Counter.razor"
+#line 9 "C:\Users\User\Documents\Kyla\blazortest_kyla\Pages\Counter.razor"
        
     private int currentCount = 0;
 
