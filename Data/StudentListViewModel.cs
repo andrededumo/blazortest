@@ -1,23 +1,20 @@
-﻿using System.Collections.ObjectModel;
+﻿using BlazorTest.Data;
+using System.Collections.Generic;
 
-namespace BlazorApp.ViewModels
+
+public class StudentListViewModel
 {
-    public class StudentListViewModel
-    {
-        public ObservableCollection<Student> Students { get; set; } = new ObservableCollection<Student>();
+    public List<Student> Students { get; set; }
 
-        public void AddStudent(Student student)
-        {
-            Students.Add(student);
-        }
-    }
-    //List of Student enrolled
-    public class Student
+    public StudentListViewModel()
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Course { get; set; }
-        public int YearLevel { get; set; }
+        Students = new List<Student>
+        {
+            new Student { Id = 1, FirstName = "John", LastName = "Doe", Course = "Computer Science", YearLevel = 3, Background = "Excellent in coding" },
+            new Student { Id = 2, FirstName = "Jane", LastName = "Smith", Course = "Business Management", YearLevel = 2, Background = "Great leadership skills" },
+            new Student { Id = 3, FirstName = "Michael", LastName = "Johnson", Course = "Engineering", YearLevel = 4, Background = "Strong analytical thinking" },
+            new Student { Id = 4, FirstName = "Emily", LastName = "Davis", Course = "Marketing", YearLevel = 1, Background = "Creative content developer" },
+            new Student { Id = 5, FirstName = "Sarah", LastName = "Brown", Course = "Finance", YearLevel = 3, Background = "Excellent financial analysis" }
+        };
     }
 }
