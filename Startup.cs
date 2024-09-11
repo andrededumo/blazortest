@@ -1,3 +1,4 @@
+using BlazorApp.ViewModels;
 using BlazorTest.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -32,9 +33,13 @@ namespace BlazorTest
             services.AddSingleton<WeatherForecastService>();
             services.AddMudServices();
             services.AddControllersWithViews();
+            services.AddSingleton<StudentListViewModel>();
+
+            services.AddSingleton<SchoolService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

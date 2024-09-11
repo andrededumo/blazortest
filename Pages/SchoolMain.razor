@@ -1,0 +1,39 @@
+﻿@page "/schoolmain"
+@using MudBlazor
+@using BlazorTest.Data
+@inject SchoolService SchoolService
+@inject NavigationManager NavigationManager
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>School Name</th>
+            <th>Address</th>
+            <th>School Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var School in SchoolService.Schools)
+        {
+            <tr>
+                <td>@School.SchoolName</td>
+                <td>@School.Address</td>
+                <td>@School.SchoolCode</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button @onclick="CreateSchool"> Add School</button>
+
+
+
+@code {
+
+    private void CreateSchool()
+    {
+        NavigationManager.NavigateTo("/schoolform");
+
+    }
+
+}
