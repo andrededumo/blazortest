@@ -1,0 +1,53 @@
+﻿@using MudBlazor
+@page "/schoolform"
+@using BlazorTest.Data
+@inject SchoolService SchoolService
+@inject NavigationManager NavigationManager
+
+ @* dsdsds *@
+<h3>School Form</h3>
+
+
+<p>School Name:</p>
+<input @bind="newSchoolName"/>
+
+<p>School Address:</p>
+<input @bind ="newAddress"/>
+
+<p>School Code:</p>
+<input @bind ="newSchoolCode"/>
+
+<br/>
+
+<button @onclick="Save"> Save</button>
+<button @onclick="Cancel">Cancel </button>
+
+@code {
+
+	private string newSchoolName;
+	private string newAddress;
+	private string newSchoolCode;
+
+	private void Save()
+	{
+		var newSchool = new School
+		{
+			SchoolName= newSchoolName,
+			Address = newAddress,
+			SchoolCode = newSchoolCode
+		};
+
+		SchoolService.Schools.Add(newSchool);
+		NavigationManager.NavigateTo("/schoolmain");
+
+
+	}
+
+	private void Cancel()
+	{
+		NavigationManager.NavigateTo("/schoolmain");
+		
+	}
+
+
+}

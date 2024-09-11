@@ -1,0 +1,47 @@
+﻿@page "/schoolupdate"
+@using BlazorTest.Data
+@inject SchoolService SchoolService
+@inject NavigationManager NavigationManager
+
+
+<h3>School Update:</h3>
+<input/>
+
+<p>School Name:</p>
+<input/>
+
+<p>School Code:</p>
+<input/>
+
+<br/>
+
+<button>Save</button>
+<button>Cancel </button>
+
+@code {
+	[Parameter]
+	public string SchoolName { get; set; }
+
+	private School currentschool;
+
+	protected override void OnInitialized()
+	{
+		currentschool = SchoolService.Schools.FirstOrDefault(s => s.SchoolName == SchoolName);
+		if (currentschool == null)
+		{
+			NavigationManager.NavigateTo("/schoolmain");
+		}	
+	}
+
+
+	private void Save()
+	{
+		NavigationManager.NavigateTo("/schoolmain");
+		
+	}
+	private void Cancel()
+	{
+		NavigationManager.NavigateTo("/schoolmain");
+	}
+
+}

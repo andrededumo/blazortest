@@ -32,6 +32,7 @@ namespace BlazorTest
             services.AddSingleton<WeatherForecastService>();
             services.AddMudServices();
             services.AddControllersWithViews();
+            services.AddSingleton<SchoolService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
